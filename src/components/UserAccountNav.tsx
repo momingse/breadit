@@ -51,12 +51,17 @@ const UserAccountNav: FC<UserAccountNavProps> = ({ user }) => {
           <Link href="/settings">Settings</Link>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem className="cursor-pointer" onSelect={(event) => {
-          event.preventDefault()
-          signOut({
-            callbackUrl: `${window.location.origin}/sign-in`
-          })
-        }}>Sign out</DropdownMenuItem>
+        <DropdownMenuItem
+          className="cursor-pointer"
+          onSelect={(event) => {
+            event.preventDefault();
+            signOut({
+              callbackUrl: `${window.location.origin}/sign-in`,
+            });
+          }}
+        >
+          Sign out
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
