@@ -13,12 +13,12 @@ interface PostVoteServerProps {
 
 const wait = (ms: number) => new Promise((res) => setTimeout(res, ms))
 
-const PostVoteServer: FC<PostVoteServerProps> = async ({
+const PostVoteServer = async ({
   postId,
   initialVotesAmt,
   initialVote,
   getData,
-}) => {
+}: PostVoteServerProps) => {
   const session = await getServerSession();
 
   let _votesAmt: number = 0;
