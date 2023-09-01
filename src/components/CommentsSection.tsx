@@ -8,7 +8,7 @@ interface CommentsSectionProps {
   postId: string;
 }
 
-const CommentsSection = async ({ postId }) => {
+const CommentsSection = async ({ postId } : CommentsSectionProps) => {
   const session = await getAuthSession();
 
   const comments = await db.comment.findMany({
