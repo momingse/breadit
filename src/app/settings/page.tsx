@@ -22,7 +22,7 @@ const page = async () => {
       <div className="grid gap-10">
         <UserNameForm user={{
             id: session.user.id,
-            username: session.user.name
+            username: session.user.name || ''
         }}/>
       </div>
     </div>
