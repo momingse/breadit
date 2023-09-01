@@ -20,7 +20,7 @@ interface pageProps {
 export const dynamic = "force-dynamic";
 export const fatchCache = "force-no-store";
 
-const page: FC<pageProps> = async ({ params }) => {
+const page = async ({ params }: pageProps) => {
   const cachedPost = (await redis.hgetall(
     `post:${params.postId}`
   )) as CachedPost;
